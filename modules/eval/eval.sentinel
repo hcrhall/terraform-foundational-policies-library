@@ -23,19 +23,21 @@ log = func(input, output) {
 
 header = func(input, output) {
 	print(
-		output + "\t------------------------------------------------------------------------\n",
+		output + "\t========================================================================\n",
 		output + "\tPOLICY CHECK SUMMARY \n" + format.reset,
-		output + "\t------------------------------------------------------------------------\n\t",
+		output + "\t========================================================================\n\t",
 		output + "ID            :" + output + "   " + input.id + "\n\t",
 		output + "Name          :" + output + "   " + input.name + "\n\t",
-		output + "Reference     :" + output + "   " + input.reference + "\n",
+		output + "Reference     :" + output + "   " + input.reference,
 	)
 	return null
 }
 
 violations = func(input, output) {
 	print(
-		output + "\t------------------------------------------------------------------------\t",
+		output + "\t========================================================================\n",
+		output + "\tRESOURCE VIOLATIONS\n" + format.reset,
+		output + "\t========================================================================\t",
 	)
 	for input.violations as violation {
 		print(
